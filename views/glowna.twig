@@ -1,0 +1,155 @@
+<body>
+<div class="container">
+    <div class="row d-flex justify-content-center mt-3 mr-2">
+        <div class="col-md-4">
+            <img src="{{ player.avatar }}" alt="Portret gracza" class="portrait m-2 ">
+            <span class="d-flex justify-content-center" style="color: snow; font-size: 15px; background-color: rgba(46, 5, 5, 0.36) !important;"> {{ name }}: {{ player.userName }}</span>   
+            <span class="d-flex justify-content-center" style="color: snow; font-size: 15px; background-color: rgba(46, 5, 5, 0.36) !important;"> {{ hp }}: {{ player.userHp }} / {{ player.userMaxHp }} </span>    
+            <span class="d-flex justify-content-center" style="color: gold; font-size: 15px; background-color: rgba(46, 5, 5, 0.36) !important;">{{ energy }}: {{ player.energy }} / {{ player.maxEnergy }}</span>
+        </div>
+    </div>
+    <div class="row d-flex justify-content-center mt-3 mr-2">
+        <h2 style="color: Snow; text-align: center;">{{ city }}</h2>
+        <div class="card text-white p-2" style="width: 25rem;">
+            <img class="card-img-top" src="images/karta-przygoda.jpg" alt="Przygody">
+            <div class="card-body d-flex flex-column">
+                <h5 class="card-title d-flex justify-content-center">{{ adventure }}</h5>
+                <p class="card-text">{{ adventure_desc }}</p>
+                <p><a href="https://dorindaduclos.com/2019/01/06/beyond-the-stones-shortstory-januarywriting/" target="_blank">{{ img_src }}</a></p>
+                <a href="przygoda.php" class="btn btn-secondary mt-auto d-flex justify-content-center">{{ start }}</a>
+            </div>
+        </div>
+
+        <div class="card text-white p-2" style="width: 25rem;">
+            <img class="card-img-top" src="images/szaman.jpg" alt="Uzdrowiciel">
+            <div class="card-body d-flex flex-column">
+                <h5 class="card-title d-flex justify-content-center">{{ healer }}</h5>
+                <p class="card-text">{{ healer_desc }}</p>
+                <p><a href="https://img.freepik.com/darmowe-zdjecie/rendering-of-wizard-controlling-magic_23-2150608391.jpg" target="_blank">{{ img_src }}</a></p>
+                <a href="szpital.php" class="btn btn-secondary btn-block mt-auto d-flex justify-content-center">{{ start }}</a>
+            </div>
+        </div>
+
+        <div class="card text-white p-2" style="width: 25rem;">
+            <img class="card-img-top" src="images/karczma.jpg" alt="Karczma">
+            <div class="card-body d-flex flex-column">
+                <h5 class="card-title d-flex justify-content-center">{{ inn }}</h5>
+                <p class="card-text">{{ inn_desc }}</p>
+                <p><a href="https://www.vecteezy.com/photo/24651031-spooky-log-cabin-in-the-dark-forest-generated-by-ai" target="_blank">{{ img_src }}</a></p>
+                <a href="tawerna.php" class="btn btn-secondary mt-auto d-flex justify-content-center">{{ start }}</a>
+            </div>
+        </div>
+
+        <div class="card text-white p-2" style="width: 25rem;">
+            <img class="card-img-top" src="images/pojedynek.jpg" alt="Arena">
+            <div class="card-body d-flex flex-column">
+                <h5 class="card-title d-flex justify-content-center">{{ arena }}</h5>
+                <p class="card-text">{{ arena_desc }}</p>
+                <p><a href="https://ru.pinterest.com/pin/293156256983667703/" target="_blank">{{ img_src }}</a></p>
+                <a href="arena.php" class="btn btn-secondary mt-auto d-flex justify-content-center">{{ start }}</a>
+            </div>
+        </div>
+
+        <div class="card text-white p-2" style="width: 25rem;">
+            <img class="card-img-top" src="images/sklep.jpg" alt="Sklep">
+            <div class="card-body d-flex flex-column">
+                <h5 class="card-title d-flex justify-content-center">{{ shop }}</h5>
+                <p class="card-text"> {{ shop_desc }}</p>
+                <p><a href="https://pl.pinterest.com/pin/763078730628239355/" target="_blank">{{ img_src }}</a></p>
+                <a href="sklep.php" class="btn btn-secondary mt-auto d-flex justify-content-center">{{ start }}</a>
+            </div>
+        </div>
+  
+        <div class="card text-white p-2" style="width: 25rem;">
+            <img class="card-img-top" src="images/praca.jpg" alt="Praca">
+            <div class="card-body d-flex flex-column">
+                <h5 class="card-title d-flex justify-content-center">{{ work }}</h5>
+                <p class="card-text">{{ work_desc }}</p>
+                <p><a href="#" target="_blank">{{ img_src }}</a></p>
+                <a href="praca.php" class="btn btn-secondary mt-auto d-flex justify-content-center">{{ start }}</a>
+            </div>
+        </div>
+
+        <div class="card text-white p-2" style="width: 25rem;">
+            <img class="card-img-top" src="images/ratusz.jpg" alt="Ratusz">
+            <div class="card-body d-flex flex-column">
+                <h5 class="card-title d-flex justify-content-center">{{ town_hall }}</h5>
+                <p class="card-text">{{ town_hall_desc }}</p>
+                <p><a href="https://i.pinimg.com/originals/5d/38/2b/5d382baaa6479663d6b1a9d4c8392181.jpg" target="_blank">{{ img_src }}</a></p>
+                <a href="ratusz.php" class="btn btn-secondary mt-auto d-flex justify-content-center">{{ start }}</a>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="row d-flex justify-content-center mt-3 mr-2">
+    <h2 style="color: Snow; text-align: center;">{{ character }}</h2>
+        <div class="card text-white p-2" style="width: 25rem;">
+            <img class="card-img-top" src="images/statystyki.jpg" alt="Statystyki">
+            <div class="card-body d-flex flex-column">
+                <h5 class="card-title d-flex justify-content-center">{{char_stat}}</h5>
+                <p class="card-text">{{char_stat_desc}}</p>
+                <p><a href="https://www.vecteezy.com/photo/25043691-old-fashioned-desk-with-quill-ink-well-and-candle-generative-ai" target="_blank">{{ img_src }}</a></p>
+                <a href="statystyki.php" class="btn btn-secondary mt-auto d-flex justify-content-center">{{ start }}</a>
+            </div>
+        </div>
+
+        
+        <div class="card text-white p-2" style="width: 25rem;">
+            <img class="card-img-top" src="images/ekwipunek.jpg" alt="Ekwipunek">
+            <div class="card-body d-flex flex-column">
+                <h5 class="card-title d-flex justify-content-center">{{equipment}}</h5>
+                <p class="card-text">{{equipment_desc}}</p>
+                <p><a href="https://pl.pinterest.com/pin/632474341446717025/" target="_blank">{{ img_src }}</a></p>
+                <a href="ekwipunek.php" class="btn btn-secondary mt-auto d-flex justify-content-center">{{ start }}</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row d-flex justify-content-center mt-3 mr-2">
+    <h2 style="color: Snow; text-align: center;">{{other_func}}</h2>
+        <div class="card text-white p-2" style="width: 25rem;">
+            <img class="card-img-top" src="images/poczta.jpg" alt="Prywatne Wiadomośco">
+            <div class="card-body d-flex flex-column">
+                <h5 class="card-title d-flex justify-content-center">{{priv_mess}}</h5>
+                <p class="card-text">{{ priv_mess_desc }}</p>
+                <p><a href="https://pl.freepik.com/darmowe-zdjecie/kruchosc-pior-pokazuje-elegancje-zwierzat-w-naturze-generowanej-przez-sztuczna-inteligencje_42189753.htm" target="_blank">{{ img_src }}</a></p>
+                <a href="wiadomosci.php" class="btn btn-secondary mt-auto d-flex justify-content-center">{{ start }}</a>
+            </div>
+        </div>
+        <div class="card text-white p-2" style="width: 25rem;">
+            <img class="card-img-top" src="images/czat.jpg" alt="Czat">
+            <div class="card-body d-flex flex-column">
+                <h5 class="card-title d-flex justify-content-center">{{ main_chat }}</h5>
+                <p class="card-text">{{ main_chat_desc }}</p>
+                <p><a href="https://pixabay.com/pl/photos/czat-ai-chatbot-chat-gpt-mobilny-7767693/" target="_blank">{{ img_src }}</a></p>
+                <a href="czat.php" class="btn btn-secondary mt-auto d-flex justify-content-center">{{ start }}</a>
+            </div>
+        </div>
+
+        <div class="card text-white p-2" style="width: 25rem;">
+            <img class="card-img-top" src="images/changelog.jpg" alt="Changelog">
+            <div class="card-body d-flex flex-column">
+                <h5 class="card-title d-flex justify-content-center">{{ changelog }}</h5>
+                <p class="card-text">{{ changelog_desc }}</p>
+                <p><a href="https://pl.pinterest.com/pin/1007610116607799620/" target="_blank">{{ img_src }}</a></p>
+                <a href="changelog.php" class="btn btn-secondary mt-auto d-flex justify-content-center">{{ start }}</a>
+            </div>
+        </div>
+
+        <div class="card text-white p-2" style="width: 25rem;">
+            <img class="card-img-top" src="images/ustawienia.jpg" alt="Ustawienia">
+            <div class="card-body d-flex flex-column">
+                <h5 class="card-title d-flex justify-content-center">{{ setting }}</h5>
+                <p class="card-text">{{ setting_desc }}</p>
+                <p><a href="https://www.dreamstime.com/royalty-free-stock-photography-gear-mechanics-settings-illustration-image22293087#res26615551" target="_blank">{{ img_src }}</a></p>
+                <a href="ustawienia.php" class="btn btn-secondary mt-auto d-flex justify-content-center">{{ start }}</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

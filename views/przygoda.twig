@@ -1,0 +1,25 @@
+<body>
+<div class="row d-flex justify-content-center">
+    <div class="col-md-3 bg-dark text-white m-3">
+        <p>
+            {{ adventure_desc_2 }}
+            </p>
+            <form class="mt-5 " action="walka.php" method="POST">
+                <div class="form-group">
+                    <input type="hidden" name="wyborPotwora">
+                </div>
+                <input class="btn btn-info" style="width:100%;" type="submit" value="Walcz">
+            </form>
+        </p>
+    </div>
+    <div class="col-md-3 mt-3">
+        <img src="images/przygoda2.jpg" class="img-fluid" alt="Przygoda">
+    </div>
+</div>
+<div class="row mt-2 d-flex justify-content-center">
+    <div class="col-5 d-flex justify-content-center bg-danger text-warning">
+    {{ info | raw }}
+    </div>
+</div>
+
+<script src="js/przygoda.js"></script>

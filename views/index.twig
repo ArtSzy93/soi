@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="author" value="Artur Szypłakowski">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ app_name }}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200&family=Lobster&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/style1.css">
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script src="https://kit.fontawesome.com/9e57951de7.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div id="okno-modalne" class="okno-info">
+            <div class="okno-info-zawartosc">
+                <p id="okno-wiadomosc"></p>
+                <span class="zamknij">{{ close }}</span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-10 logo d-flex p-2 mt-2 justify-content-center">
+            <img src="images/logo.jpg" height="400px" width="100%" alt="" srcset="">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="row">
+                        <p id="bledne-dane">{{ error }}</p>
+                        <p> {{ info }} </p> 
+                <div class="col-12 logowanie">
+                    <br>    
+                    <form id="logowanie" class="formularz-logowanie" name="logowanie" method="POST" action="logowanie.php">
+                        <h2>{{ login }}</h2>
+                        <p>
+                            <label for="e-mail"><i class="fa-solid fa-envelope"></i> {{email}}: </label>
+                            <input class="pola-logowanie" type="email" name="email" id="e-mail1" required>
+                        </p>
+                        <p>
+                            <label for="haslo"><i class="fa-solid fa-lock"></i> {{ pass }}: </label>
+                            <input class="pola-logowanie" type="password" name="password" id="haslo1" required>
+                        </p>
+                           <p class="d-flex justify-content-center g-recaptcha" data-sitekey="6Lcv81kpAAAAAHQaMswCwNgKY_s4rQDNgc244BP1">
+                        </p>
+                        <p>
+                            <input  class="przyciski-strona-glowna" type="submit" name="logowanie" value="{{ login_btn }}"> 
+                        </p>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 mt-4 rejestracja">
+                    <h2>{{ register }}</h2>
+                    <p id="message"></p>
+                    <form id="rejestracja">
+                        <p>
+                            <label for="username"><i class="fa-solid fa-user-plus"></i> {{name}}:</label>
+                            <input class="pola-rejestracja" type="text" id="username" name="username" required>
+                        </p>
+                        <p>
+                            <label for="email"><i class="fa-solid fa-envelope"></i> {{email}}::</label>
+                            <input class="pola-rejestracja" type="email" id="email" name="email" required>
+                        </p>
+                        <p>
+                            <label for="remail"><i class="fa-solid fa-envelope"></i> {{re_email}}::</label>
+                            <input class="pola-rejestracja" type="email" id="remail" name="remail" required>
+                        </p>
+                        <p>
+                            <label for="password"><i class="fa-solid fa-lock"></i> {{ pass }}:</label>
+                            <input class="pola-rejestracja" type="password" id="password" name="password" required>
+                        </p>
+                        <p>
+                            <label for="repassword"><i class="fa-solid fa-lock"></i> {{ re_pass }}:</label>
+                            <input class="pola-rejestracja" type="password" id="repassword" name="repassword" required>
+                        </p>
+                       
+                        <p><button class="przyciski-strona-glowna"  type="submit">{{ register_btn }}  <i class="fa-solid fa-right-to-bracket"></i></button></p>
+                    </form>
+                   
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12 d-none d-lg-block zmiany">
+                    <h2>Ostatnie zmiany</h2>
+                {{  changelog() }}
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="row m-1 mt-0">
+                <div class="col-12 informacje">
+                    {{ start_1 | raw}}
+                </div>
+            </div>
+            <div class="row m-3">
+                <div class="col-12 informacje">
+                    {{ start_2 | raw }}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 mt-4  stopka">
+            <p>&copy; Artur Szypłakowski 2023-2024. Wszelkie prawa zastrzeżone</p>
+        </div>
+    </div>
+</div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="js/rejestracja.js"></script>
+</body>
+</html>

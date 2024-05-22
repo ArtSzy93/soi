@@ -1,0 +1,104 @@
+Aplikacja zawiera następujące funkcje i rozwiązania. Spisane, aby łatwiej było ją podsumować. 
+
+1. Rejestracja konta:
+- Sprawdzanie długości hasła
+- Sprawdzanie, czy użytkownik o loginie istnieje
+- Sprawdzanie, czy użytkownik o e-mailu istnieje
+- Hashowanie haseł
+- Sprawdzanie poprawności podanych haseł
+- Wysyłanie maila z linkiem aktywacyjnycm
+
+2. Logowanie
+- Sprawdza czy hasło i e-mail poprawne
+- Logowanie z przypisaniem SESSION, przekierowanie na strone główną.
+- Sprawdzam czy konto aktywne.
+
+3. Panel górny
+- Zakładki nawigacyjne
+- Złoto gracza 
+- Data i godzina
+
+4. Panel główny
+- Karty miejsc do szybkiego przemieszczania
+- Podział na klimat / no-klimat
+
+5. Sklep 
+- Zawiera opis, zdjecie, panel górny
+- Tabela z bronią
+- Możliwość zakupu broni
+- Sprawdza, czy broń nie została wcześniej kupiona
+- Sprawdza, czy gracz ma fundusze
+
+6. Ekwipunek
+- Aktualnie założona broń
+- Możliwość nadania pseudonimu dla broni
+- Lista broni w ekwipunku, zakupione ze sklepu
+- Założona broń znika z listy dostępnych broni
+
+
+7. Panel admina
+- Dodanie potwora do gry
+- Dodanie broni do gry 
+- Dodanie changeloga
+
+8. Przygody 
+- Możliwośc rozpoczecia przygody
+- Opis lokacji + foto
+- Przejście do skryptu walki
+
+9. Walka 
+- System walki, turowy
+- Każda walka kosztuje energie
+- Zabezpieczenie przed walką, gdy user martwy
+- Zabezpieczenie przed walką, gdy user nie ma energii
+- Po walce dodanie exp
+
+10. Prywatne wiadomości
+- Formularz wysyłania wiadomości do gracza (Po nicku lub ID konta)
+- Wyświetlanie listy (Data, Nadawca, Temat) pod formularzem
+- Wyświetlanie wskazanej wiadomości w osobnej zakładce (z treścią)
+- Usuwanie wiadomości z wiadomosci.php oraz czytaj.php
+
+11. Prywatna karczma
+- Możliwość złożenia nowego pokoju
+- Lista pokoi, do których należy user
+- Przejście do prywatnego pokoju
+- Prywatny pokój ma swój osobny czat, tylko dla zaproszonych uczestników
+- System zaraszania graczy do pokoju (Sprawdza, czy gracz istnieje oraz czy nie jest już członkiem)
+- System usuwania graczy z pokoju
+
+12. Ustawienia konta
+- Możliwośc zmiany hasła
+- Możliwość zmiany nickname
+
+13. Wylogowanie 
+- Skrypt zakończenia sesji po wejściu z panelu górnego 
+
+14. Dodatkowe zabezpieczenia
+- System SESJI pilnujący dostępu dla niezalogowanych osób.
+- System energi do podejmowania akcji 
+
+15. Czat publiczny
+- Miejsce do rozmów ogólnych
+- Wysyłanie wiadomości JS/php
+- Możliwość wysyłania wiadomości ENTEREM
+
+16. Karczma publiczna
+- To samo co czat publiczny, tylko w klimacie fantasy.
+
+17. Uzdrowiciel 
+- Wprowadzono funkcje uzdrowiciela, który przywraca życie graczowi.
+- Uzdrowiciel, na ten moment, zasuwa za friko
+
+10. Cykliczne restarty
+- Restarty przywracają zdrowie i energie do poziomu maksymalnego co godzinę.
+- Domyślnie, uruchamiane co godzine.
+
+CO MOŻNA/TRZEBA ZROBIĆ:
+- Zrobić profil gracza do podglądu 
+- Awatary graczy
+- Ogłoszenia graczy
+- System banów/zawieszenia
+- System rzutu kością w karczmie
+- reCaptcha logowanie/Rejestracja
+
